@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pastel-de-cumpleanos.png" type="image/x-icon">
+
+    <title>Tarjeta de Cumpleaños</title>
+    <style>
+        .tarjeta {
+            text-align: center;
+        }
+
+        .tarjeta-oculta {
+            opacity: 0;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sobre" onclick="mostrarContenido() ">
+        <div class="solapa"></div>
+        <div class="contenido-sobre">
+            <p>Haz clic para ver el mensaje</p>
+        </div>
+    </div>
+
+    <div class="tarjeta tarjeta-oculta" id="contenido">
+        <h1 class="tittle">Feliz Cumpleaños bandida!</h1>
+        <img id="imagenCumple" src="hp.jpg" alt="Imagen de Cumpleaños">
+        <p>Querida eva...pito</p>
+        <p>¡En tu día especial, quiero desearte un año lleno de alegría, amor y éxito!....pito tambien.
+        nah bandida, nunca fui bueno regalos asi que te tendras que conformar con esta wbadita</p>
+        <p>Que este nuevo año de vida te traiga momentos inolvidables y felicidad constante...pito tripleee, gracias por esos ciertos
+        momentos que pasamos y esas charlas medio raras que haces. mas que mi sister, eres mi hermana(ojala lo hayas entendido)</p>
+        <p>No tengo mucho para decir realmente, lo poco que hemos compartido han sido buenos recuerdos, aprecio tu amistad muy bandida. no es la gran vaina cumplir 18 años pero beno aqui estas y te toca empezar a volar como una mariposita libre. <br><br> jaaaa pobrecita, lo que le espera🤣🫵 <3 .</p>
+        <p id="mensajeCambiable">¡Feliz Cumpleaños!</p>
+    </div>
+
+    <script>
+        var imagenes = ["hp2.jpg", "hp3.jpg", "hp4.jpg","hp5.jpg"]; // Agrega las rutas de las imágenes que quieras mostrar
+        var indiceImagen = 0;
+
+        function cambiarImagen() {
+            var imagenCumple = document.getElementById("imagenCumple");
+            imagenCumple.src = imagenes[indiceImagen];
+            indiceImagen = (indiceImagen + 1) % imagenes.length;
+        }
+
+        // Cambia la imagen cada 4 segundos
+        setInterval(cambiarImagen, 4000);
+
+        function mostrarContenido() {
+            var sobre = document.querySelector('.sobre');
+            var contenido = document.getElementById('contenido');
+
+            sobre.style.animation = 'abrirSobre 1s forwards';
+
+            // Retraso para mostrar el contenido después de que se abra el sobre
+            setTimeout(function () {
+                contenido.classList.remove('tarjeta-oculta');
+            }, 800); // 800 milisegundos es la duración de la animación "abrirSobre"
+        }
+        function mostrarContenido() {
+    var sobre = document.querySelector('.sobre');
+    var contenido = document.getElementById('contenido');
+
+    sobre.classList.add('sobre-clic'); // Agrega la clase para desaparecer
+
+    // Retraso para mostrar el contenido después de que se haya completado la animación de desaparición
+    setTimeout(function () {
+        contenido.classList.remove('tarjeta-oculta');
+    }, 1000); // 1000 milisegundos es la duración de la animación "desaparecerSobre"
+
+
+ var mensajes = [
+        "¡Feliz Cumpleaños!",
+        "¡Espero que tengas un día maravilloso!",
+        "Que este año esté lleno de éxitos y alegrías.",
+        "Gracias por ser una persona increíble.",
+        "¡Desarrollate flaca a la firme!"
+    ];
+
+    var indiceMensaje = 0;
+
+    function cambiarMensaje() {
+        var mensajeCambiable = document.getElementById("mensajeCambiable");
+        mensajeCambiable.textContent = mensajes[indiceMensaje];
+        indiceMensaje = (indiceMensaje + 1) % mensajes.length;
+    }
+
+    // Cambia el mensaje cada 10 segundos
+    setInterval(cambiarMensaje, 3000);
+}
+
+    </script>
+
+</body>
+</html>

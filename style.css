@@ -1,0 +1,177 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(212, 207, 213);
+    text-align: center;
+
+background-size: cover;
+    opacity: .9;
+}
+
+.tittle{
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 40px;
+letter-spacing: 1.2px;
+word-spacing: -2.2px;
+color: #ff0099;
+font-weight: 700;
+text-decoration: none solid rgb(189, 9, 9);
+font-style: italic;
+font-variant: small-caps;
+text-transform: none;
+text-shadow: -4px -12px 8px rgb(44, 24, 24);
+    animation: bounce 1s infinite; /* Animación de rebote */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición inicial y final sin cambios */
+    }
+    40% {
+        transform: translateY(-20px); /* Punto más alto del rebote */
+    }
+    60% {
+        transform: translateY(-10px); /* Punto medio del rebote */
+    }
+}
+.tarjeta {
+ 
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(163, 87, 125, 0.409);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.tarjeta p {
+    font-family: 'Arial', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+
+
+}
+
+#mensajeCambiable{
+    font-size: large;
+    color: #ff0099;
+text-shadow: -4px -12px 8px rgb(44, 24, 24);
+text-decoration: none solid rgb(189, 9, 9);
+
+
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #010101;
+    line-height: 1.6;
+}
+
+.contenido-sobre {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    text-align: center;
+    
+}
+@keyframes abrirSobre {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}
+
+
+
+.sobre {
+
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: auto;
+    transition: opacity 0.5s ease; /* Agregamos una transición de 0.5 segundos al opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url(sobre.png);
+background-size: cover;
+ animation: vibra 1s infinite;
+}
+
+@media (max-width: 767px) {
+    .sobre {
+        width: 100%; /* El ancho ocupa el 100% del contenedor padre */
+        height: auto; /* La altura se ajusta automáticamente según el contenido */
+    }
+}
+
+@keyframes vibra {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    ¿
+}
+
+@keyframes vibra {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.sobre-clic {
+    animation: desaparecerSobre 1s forwards;
+}
+
+/* ... (resto de tu código) ... */
+
+@keyframes abrirSobre {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}
+
+@keyframes desaparecerSobre {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        position: absolute;
+    }
+}
