@@ -115,19 +115,12 @@ background-size: cover;
 
 @media (max-width: 767px) {
     .sobre {
-        width: 100%; /* El ancho ocupa el 100% del contenedor padre */
-        height: auto; /* La altura se ajusta automáticamente según el contenido */
+        margin:auto;    
+        width: 350px; /* El ancho ocupa el 100% del contenedor padre */
+        height: 350px; /* La altura se ajusta automáticamente según el contenido */
     }
 }
 
-@keyframes vibra {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    25%, 75% {
-        transform: translateX(-5px);
-    ¿
-}
 
 @keyframes vibra {
   0% {
